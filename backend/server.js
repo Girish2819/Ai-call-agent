@@ -195,10 +195,12 @@ If question is outside this knowledge, give a practical short guidance and ask u
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
-  }),
+    origin: [
+      "http://localhost:5173",
+      "https://ai-call-agent-eight.vercel.app",
+    ],
+  })
 );
-
 app.get("/", (req, res) => {
   res.send("Backend is running ");
 });
