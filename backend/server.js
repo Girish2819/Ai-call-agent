@@ -199,6 +199,10 @@ app.use(
   }),
 );
 
+app.get("/", (req, res) => {
+  res.send("Backend is running ");
+});
+
 app.get("/api/health", (req, res) => {
   res.json({ ok: true, message: "Backend is running." });
 });
